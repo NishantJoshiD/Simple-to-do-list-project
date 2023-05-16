@@ -1,7 +1,7 @@
-// Store the tasks in an array
+
 let tasks = [];
 
-// Function to add a new task
+
 function addTask() {
   const input = document.getElementById("new-task");
   const taskName = input.value;
@@ -13,19 +13,19 @@ function addTask() {
   }
 }
 
-// Function to remove a task
+
 function removeTask(index) {
   tasks.splice(index, 1);
   displayTasks();
 }
 
-// Function to mark a task as complete
+
 function toggleComplete(index) {
   tasks[index] = tasks[index].startsWith("✅ ") ? tasks[index].substring(2) : "✅ " + tasks[index];
   displayTasks();
 }
 
-// Function to display the tasks
+
 function displayTasks() {
   const list = document.getElementById("task-list");
   list.innerHTML = "";
